@@ -1,0 +1,49 @@
+.memory-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust based on number of cards per row */
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  width: 80px;
+  height: 100px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card.flipped,
+.card.matched {
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  visibility: hidden; /* Or apply a different style to show it's matched */
+}
+
+.card:hover {
+  border-color: #007bff; /* Highlight on hover */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
